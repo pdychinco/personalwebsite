@@ -1,0 +1,126 @@
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/background1.jpg");
+}
+
+.Header {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 25% 12.5% 12.5% 12.5% 12.5% 25%;
+  text-align: center;
+  visibility: visible;
+}
+
+.HeaderSmall {
+  visibility: hidden;
+}
+
+.SkillsHeader .ProjectsHeader .ExperienceHeader .EducationHeader .AboutMeHeader{
+  grid-row: 1;
+}
+
+.SkillsHeader {
+  grid-column: 2;
+}
+
+.ProjectsHeader {
+  grid-column: 3;
+}
+
+.ExperienceHeader {
+  grid-column: 4;
+}
+
+.EducationHeader {
+  grid-column: 5;
+}
+
+.Footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.Welcome, .Skills, .Projects, .Experience, .Education{
+  padding: 1px 5px;
+}
+
+#project1, #project2, #project3, #exp1, #exp2, #exp3{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+
+.name {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.date {
+  grid-row: 2;
+  grid-column: 2;
+  text-align: end;
+}
+
+.description {
+  grid-column: 1 / span 2;
+}
+
+.title {
+  grid-row: 2;
+  grid-column: 1;
+  padding: 0;
+  margin: 0;
+}
