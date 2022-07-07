@@ -32,9 +32,11 @@ function Welcome() {
           <h1>PRINCETON <span>DYCHINCO</span></h1>
           <h3>604-379-3939 · PDYCHINCO@MY.BCIT.CA</h3>
 
-          <p>Hello! I am currently a second-term Computer Systems Technology student in the Co-op program at BCIT. I enjoy coding, because I love creating something out of nothing! During my free time, I like to play sports such as volleyball and spikeball with my friends.</p>
-          <a href="https://www.github.com/pdychinco"><img id="github" src={github} alt="GitHub" width="64" height="64"/></a>
-          <a href="https://www.linkedin.com/in/prdychinco"><img id="linkedin" src={linkedin} alt="LinkedIn" width="72" height="64"/></a>
+          <p className="description">Hello! I am currently a second-term Computer Systems Technology student in the Co-op program at BCIT. I enjoy coding, because I love creating something out of nothing! During my free time, I like to play sports such as volleyball and spikeball with my friends.</p>
+          <div className="links">
+              <a href="https://www.github.com/pdychinco"><img id="github" src={github} alt="GitHub" width="64" height="64"/></a>
+              <a href="https://www.linkedin.com/in/prdychinco"><img id="linkedin" src={linkedin} alt="LinkedIn" width="72" height="64"/></a>
+          </div>
       </div>
     );
 }
@@ -56,13 +58,13 @@ function Skills() {
         <div id="Skills" className="Skills">
             <h2>Technical Skills</h2>
             <h4>Programming Languages</h4>
-            <p>Java, Python, SwiftUI</p>
+            <p className="description">Java, Python, SwiftUI</p>
             <h4>Web Development</h4>
-            <p>HTML5, CSS5, Javascript ( client / server ), React</p>
+            <p className="description">HTML5, CSS5, Javascript ( client / server ), React</p>
             <h4>Databases</h4>
-            <p>MySQL, FireBase</p>
+            <p className="description">MySQL, FireBase</p>
             <h4>Workflow</h4>
-            <p>GitHub, Agile Scrum Methodology</p>
+            <p className="description">GitHub, Agile Scrum Methodology</p>
         </div>
     );
 }
@@ -170,8 +172,8 @@ function Education() {
             <h2>Education</h2>
             <div id="educ1">
                 <span className="date">Jan 2022 - Present</span>
-                <h3>British Columbia Institute of Technology</h3>
-                <div className="details">
+                <h3 className="title">British Columbia Institute of Technology</h3>
+                <div className="description">
                     <p className="degree">Diploma of Education, Computer Technology / Computer Systems Technology</p>
                     <p id="grade">Grade: 90% for Term One</p>
                     <p id="detail">Co-op Student for January 2023 Term</p>
@@ -180,8 +182,8 @@ function Education() {
 
             <div id="educ2">
                 <span className="date">2016 - 2019</span>
-                <h3>Simon Fraser University</h3>
-                <div className="details">
+                <h3 className="title">Simon Fraser University</h3>
+                <div className="description">
                     <p className="degree">Bachelor of Arts - BA, Psychology</p>
                 </div>
             </div>
