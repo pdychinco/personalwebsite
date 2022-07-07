@@ -53,6 +53,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-image: url("../public/background1.jpg");
+  text-shadow: 0 0 3px white;
 }
 
 .Header {
