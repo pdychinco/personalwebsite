@@ -34,8 +34,8 @@ function Welcome() {
         <div className="allIntro">
           <h1 id="name">PRINCETON <span>DYCHINCO</span></h1>
           <h3 className="introDetails">CST Co-op Student</h3>
-          <h3 className="introDetails">AWS AI/ML Scholarship Recipient</h3>
-          <h4 className="introDetails">Top 10 Student in Ottawa 2022 Canadian Student Wildcard Race of AWS DeepRacer Student League</h4>
+          <h3 className="introDetails">AWS AI/ML Scholarship Recipient Fall 2022</h3>
+          <h4 className="introDetails">Finished Top 10 in Ottawa 2022 Canadian Student Wildcard Race of AWS DeepRacer Student League</h4>
         </div>
       </div>
     );
@@ -58,7 +58,7 @@ function Content() {
 function Skills() {
     return (
         <div id="Skills" className="Skills">
-            <h2>Technical Skills</h2>
+            <h2 className="Heading">Technical Skills</h2>
             <h4>Programming Languages</h4>
             <p className="description">Python, Java</p>
             <h4>Web Development</h4>
@@ -74,7 +74,7 @@ function Skills() {
 function Projects() {
     return(
     <div id="Projects" className="Projects">
-        <h2>Projects</h2>
+        <h2 className="Heading">Projects</h2>
         <div id="project1">
             <a className="name" href="https://aws.amazon.com/deepracer/"><h3>AWS DeepRacer Student League</h3></a>
             <span className="date">Mar 2022 - May 2022</span><br/>
@@ -125,7 +125,7 @@ function Projects() {
 function Experience() {
     return (
       <div id="Experience" className="Experience">
-          <h2>Work Experience</h2>
+          <h2 className="Heading">Work Experience</h2>
           <div id="exp1">
               <span className="date">August 2022 - Present</span>
               <h3 className="name">British Columbia Institute of Technology</h3>
@@ -181,7 +181,7 @@ function Experience() {
 function Education() {
     return (
         <div id="Education" className="Experience">
-            <h2>Education</h2>
+            <h2 className="Heading">Education</h2>
             <div id="educ1">
                 <span className="date">Jan 2022 - Present</span>
                 <h3 className="title">British Columbia Institute of Technology</h3>

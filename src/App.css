@@ -54,7 +54,7 @@ html, body {
 #root {
   margin: 0;
   padding: 0;
-  text-shadow: 0 0 3px white;
+  color: white;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -92,20 +92,33 @@ html, body {
 
 .Footer {
   text-align: center;
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
 }
 
+.Heading {
+  color: rebeccapurple;
+}
 .Welcome, .Skills, .Projects, .Experience, .Education{
+  background-color: black;
   padding: 1px 5px;
 }
 
 .Welcome{
   margin: 0;
   width: 100vw;
-  height: 58vw;
+  height: 56vw;
 }
 
+#name {
+  font-size: 400%;
+}
+
+.introDetails {
+  font-size: 200%;
+}
 
 .allIntro {
   text-align: center;
@@ -152,15 +165,44 @@ html, body {
   margin-left: 25px;
 }
 
+@media only screen and (max-width: 1300px) {
+  .allIntro {
+    padding: 150px 5px;
+  }
+
+  #name {
+    font-size: 300%;
+  }
+
+  .introDetails {
+    font-size: 160%;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .allIntro {
     padding: 150px 5px;
+  }
+
+  #name {
+    font-size: 250%;
+  }
+
+  .introDetails {
+    font-size: 120%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .allIntro {
     padding: 100px 5px;
+  }
+
+  #name {
+    font-size: 150%;
+  }
+
+  .introDetails {
+    font-size: 100%;
   }
 }
 
