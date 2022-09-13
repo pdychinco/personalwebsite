@@ -54,7 +54,6 @@ html, body {
 #root {
   margin: 0;
   padding: 0;
-  background-image: url("../public/background1.jpg");
   text-shadow: 0 0 3px white;
   font-family: 'PT Sans', sans-serif;
 }
@@ -101,7 +100,25 @@ html, body {
   padding: 1px 5px;
 }
 
-#project1, #project2, #project3, #exp1, #exp2, #exp3, #educ1, #educ2{
+.Welcome{
+  margin: 0;
+  width: 100vw;
+  height: 58vw;
+}
+
+
+.allIntro {
+  text-align: center;
+  padding: 200px 0;
+}
+
+#name , .introDetails {
+  color:white;
+  text-shadow: 0 0 3px black;
+}
+
+
+#project1, #project2, #project3, #exp1, #exp2, #exp3, #exp4, #educ1, #educ2, #educ3{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
@@ -133,4 +150,28 @@ html, body {
 
 .links > a {
   margin-left: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .allIntro {
+    padding: 150px 5px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .allIntro {
+    padding: 100px 5px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .allIntro {
+    padding:50px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .allIntro {
+    padding: 0 5px;
+  }
 }

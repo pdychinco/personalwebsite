@@ -1,22 +1,8 @@
 import './App.css';
 import github from './img/github.png';
 import linkedin from './img/linkedin.png';
+import cover from './img/background.jpg';
 
-function Header() {
-    const closeNav = () => {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("root").style.marginLeft = "0";
-    }
-    return (
-        <div id="mySidebar" className="sidebar">
-            <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
-            <HeaderItem category="Skills"/>
-            <HeaderItem category="Projects"/>
-            <HeaderItem category="Experience"/>
-            <HeaderItem category="Education"/>
-        </div>
-    );
-}
 function HeaderItem(props) {
     return(
         <div className={props.category + "Header"}>
@@ -27,16 +13,30 @@ function HeaderItem(props) {
 }
 
 function Welcome() {
+    const openNav = () => {
+        document.getElementById("mySidebar").style.width = "200px";
+        document.getElementById("root").style.marginLeft = "200px";
+    }
+    const closeNav = () => {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("root").style.marginLeft = "0";
+    }
     return (
-      <div id="welcome" className="Welcome">
-          <h1>PRINCETON <span>DYCHINCO</span></h1>
-          <h3>604-379-3939 · PDYCHINCO@MY.BCIT.CA</h3>
-
-          <p className="description">Hello! I am currently a second-term Computer Systems Technology student in the Co-op program at BCIT. I enjoy coding, because I love creating something out of nothing! During my free time, I like to play sports such as volleyball and spikeball with my friends.</p>
-          <div className="links">
-              <a href="https://www.github.com/pdychinco"><img id="github" src={github} alt="GitHub" width="64" height="64"/></a>
-              <a href="https://www.linkedin.com/in/prdychinco"><img id="linkedin" src={linkedin} alt="LinkedIn" width="72" height="64"/></a>
-          </div>
+      <div id="welcome" className="Welcome" style={{ backgroundImage:`url(${cover}`, backgroundRepeat:"no-repeat", backgroundSize:"contain"}}>
+        <button className="openbtn" onClick={openNav}>☰</button>
+        <div id="mySidebar" className="sidebar">
+          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
+          <HeaderItem category="Skills"/>
+          <HeaderItem category="Projects"/>
+          <HeaderItem category="Experience"/>
+          <HeaderItem category="Education"/>
+        </div>
+        <div className="allIntro">
+          <h1 id="name">PRINCETON <span>DYCHINCO</span></h1>
+          <h3 className="introDetails">CST Co-op Student</h3>
+          <h3 className="introDetails">AWS AI/ML Scholarship Recipient</h3>
+          <h4 className="introDetails">Top 10 Student in Ottawa 2022 Canadian Student Wildcard Race of AWS DeepRacer Student League</h4>
+        </div>
       </div>
     );
 }
@@ -53,12 +53,14 @@ function Content() {
     );
 }
 
+
+
 function Skills() {
     return (
         <div id="Skills" className="Skills">
             <h2>Technical Skills</h2>
             <h4>Programming Languages</h4>
-            <p className="description">Java, Python, SwiftUI</p>
+            <p className="description">Python, Java</p>
             <h4>Web Development</h4>
             <p className="description">HTML5, CSS5, Javascript ( client / server ), React</p>
             <h4>Databases</h4>
@@ -125,6 +127,16 @@ function Experience() {
       <div id="Experience" className="Experience">
           <h2>Work Experience</h2>
           <div id="exp1">
+              <span className="date">August 2022 - Present</span>
+              <h3 className="name">British Columbia Institute of Technology</h3>
+              <p className="title">Resident Advisor</p>
+              <ul className="description">
+                  <li>Assisting planning with welcome housing wide events</li>
+                  <li>Supporting residents with transition to Student Housing and academic life at BCIT</li>
+                  <li>Promote, sponsor and organize house specific events to foster community and relationship with students</li>
+              </ul>
+          </div>
+          <div id="exp2">
               <span className="date">Sept 2019 - May 2022</span>
               <h3 className="name">The Salvation Army</h3>
               <p className="title">Shelter Worker</p>
@@ -137,7 +149,7 @@ function Experience() {
               </ul>
           </div>
 
-          <div id="exp2">
+          <div id="exp3">
               <span className="date">Aug 2021 - Jan 2022</span>
               <h3 className="name">Apple Canada</h3>
               <p className="title">Specialist</p>
@@ -148,7 +160,7 @@ function Experience() {
               </ul>
           </div>
 
-          <div id="exp3">
+          <div id="exp4">
               <span className="date">Aug 2019 - Aug 2021</span>
               <h3 className="name">Bell Canada</h3>
               <p className="title">Sales Consultant</p>
@@ -181,6 +193,16 @@ function Education() {
             </div>
 
             <div id="educ2">
+                <span className="date">July - August 2022</span>
+                <h3 className="title">Udacity, Virtual Classroom</h3>
+                <div className="description">
+                    <p className="degree">Nanodegree: AI Programming with Python</p>
+                    <p id="detail">Course offered through AWS AI & ML Scholarship</p>
+                    <p>Topics Covered: Jupyter Notebooks, NumPy, Anaconda, pandas, Matplotlib, Linear Algebra, Calculus, Neural Networks</p>
+                </div>
+            </div>
+
+            <div id="educ3">
                 <span className="date">2016 - 2019</span>
                 <h3 className="title">Simon Fraser University</h3>
                 <div className="description">
@@ -190,25 +212,25 @@ function Education() {
         </div>
     );
 }
-
-
 function Footer() {
-    return (
+    return(
         <div className="Footer">
+            <div className="links">
+                <a href="https://www.github.com/pdychinco"><img id="github" src={github} alt="GitHub" width="64" height="64"/></a>
+                <a href="https://www.linkedin.com/in/prdychinco"><img id="linkedin" src={linkedin} alt="LinkedIn" width="72" height="64"/></a>
+            </div>
+            <h3>604-379-3939 · PDYCHINCO@MY.BCIT.CA</h3>
             <p>© 2022 Princeton Dychinco</p>
         </div>
-    )
+    );
 }
 
 function App() {
-    const openNav = () => {
-        document.getElementById("mySidebar").style.width = "200px";
-        document.getElementById("root").style.marginLeft = "200px";
-    }
+
   return (
     <div className="App">
-      <Header />
-        <button className="openbtn" onClick={openNav}>☰</button>
+      {/*<Header />*/}
+
       <Content />
       <Footer />
     </div>
