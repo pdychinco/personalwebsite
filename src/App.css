@@ -51,6 +51,19 @@ html, body {
   height: 100%;
 }
 
+.Heading {
+  color: darkviolet;
+}
+
+a {
+  text-decoration: none;
+  color: #E065FF;
+}
+
+a:hover {
+  color: #3C4FFF;
+}
+
 #root {
   margin: 0;
   padding: 0;
@@ -98,9 +111,6 @@ html, body {
   padding: 0;
 }
 
-.Heading {
-  color: rebeccapurple;
-}
 .Welcome, .Skills, .Projects, .Experience, .Education{
   background-color: black;
   padding: 1px 5px;
@@ -131,7 +141,7 @@ html, body {
 }
 
 
-#project1, #project2, #project3, #exp1, #exp2, #exp3, #exp4, #educ1, #educ2, #educ3{
+#project1, #project2, #project3, #project4, #project5, #project6, #exp1, #exp2, #exp3, #exp4, #educ1, #educ2, #educ3{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
