@@ -1,0 +1,63 @@
+body {
+    background-color: #ADD8E6;
+}
+
+.tag {
+    text-align: center;
+}
+
+.slick-slide a {
+    margin: 0;
+    padding: 0;
+}
+
+.slick-slide img {
+    margin: auto;
+    padding: 0;
+    width: 30em;
+    height: 30em;
+}
+
+.projectslider {
+    padding-left: 10em;
+    padding-right: 10em;
+}
+.card {
+    padding: 0;
+}
+
+.desc {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: center;
+}
+
+.projectTitle {
+    text-align: center;
+}
+
+.projectLinks {
+    margin-left: 27vw;
+    margin-right: 25vw;
+    justify-content: center;
+    max-width: 480px;
+}
+
+.slick-slide {
+    visibility: hidden;
+}
+.slick-slide.slick-active {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 400px) {
+    .projectslider {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .slick-slide img {
+        width: 10em;
+        height: 10em;
+    }
+}

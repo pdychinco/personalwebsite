@@ -7,7 +7,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #ADD8E6;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -37,8 +37,8 @@
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
-  color: white;
+  background-color: #ADD8E6;
+  color: black;
   padding: 10px 15px;
   border: none;
 }
@@ -51,23 +51,18 @@ html, body {
   height: 100%;
 }
 
-.Heading {
-  color: darkviolet;
-}
-
 a {
   text-decoration: none;
-  color: #E065FF;
 }
 
-a:hover {
-  color: #3C4FFF;
+.Heading {
+  color: blue;
 }
 
 #root {
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -105,21 +100,20 @@ a:hover {
 
 .Footer {
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #ADD8E6;
+  color: black;
   margin: 0;
   padding: 0;
 }
 
 .Welcome, .Skills, .Projects, .Experience, .Education{
-  background-color: black;
+  background-color: #ADD8E6;
   padding: 1px 5px;
 }
 
 .Welcome{
   margin: 0;
-  width: 100vw;
-  height: 56vw;
+  height: 60vh;
 }
 
 #name {
@@ -132,12 +126,39 @@ a:hover {
 
 .allIntro {
   text-align: center;
-  padding: 200px 0;
+  padding-top: 50px;
 }
 
 #name , .introDetails {
   color:white;
   text-shadow: 0 0 3px black;
+}
+
+
+
+.Skills {
+  display: grid;
+  grid-template-rows: 15% 35% 35% 15%;
+  grid-template-columns: 60% 40%;
+}
+
+.Skills > .Heading {
+  grid-row: 1 ;
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+.languagegrid, .webgrid, .databasegrid, .workflowgrid {
+  text-align: center;
+}
+
+.languagegrid {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.description > p {
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -173,6 +194,14 @@ a:hover {
 
 .links > a {
   margin-left: 25px;
+}
+
+.languagegrid, .webgrid {
+  margin-bottom: 8em;
+}
+
+.webgrid, .workflowgrid {
+  padding-right: 25em;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -239,5 +268,27 @@ a:hover {
 
   .introDetails {
     font-size: 80%;
+  }
+
+  .Welcome {
+    height: 15em;
+    width: 105%;
+  }
+
+  .allIntro {
+    padding-top: 30px;
+  }
+
+  .languagegrid, .webgrid {
+    margin-bottom: 8em;
+  }
+
+  .webgrid, .workflowgrid {
+    padding-right: 0;
+  }
+
+  .Skills > p {
+    padding-right: 5em;
+    margin-right: 5em;
   }
 }
